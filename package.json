@@ -1,8 +1,12 @@
 {
   "name": "junglegaming-backend-challenge",
-  "module": "index.ts",
+  "module": "src/main.ts",
   "type": "module",
   "private": true,
+  "scripts": {
+    "dev": "bun --watch src/main.ts",
+    "start": "bun src/main.ts"
+  },
   "devDependencies": {
     "@mikro-orm/cli": "^7.2.11",
     "@types/bun": "^1.4.5",
