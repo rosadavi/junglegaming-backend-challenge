@@ -17,7 +17,7 @@ export default defineConfig({
   debug: true,
 
   migrations: {
-    path: "../migrations",
+    path: "./src/migrations",
     snapshot: false,
   },
 });
