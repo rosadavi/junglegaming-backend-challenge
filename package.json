@@ -3,9 +3,19 @@
   "module": "src/main.ts",
   "type": "module",
   "private": true,
+  "mikro-orm": {
+    "configPaths": [
+      "./src/config/mikro-orm.config.ts"
+    ],
+    "preferTs": true
+  },
   "scripts": {
     "dev": "bun --watch src/main.ts",
-    "start": "bun src/main.ts"
+    "start": "bun src/main.ts",
+    "migration:create": "bun --bun --env-file=.env mikro-orm migration:create",
+    "migration:up": "bun --bun --env-file=.env mikro-orm migration:up",
+    "migration:down": "bun --bun --env-file=.env mikro-orm migration:down",
+    "migration:list": "bun --bun --env-file=.env mikro-orm migration:list"
   },
   "devDependencies": {
     "@mikro-orm/cli": "^7.2.11",
